@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #00dffc;
+    --secondary-color: #008c9e;
+    --tertiary-color: #005f6b;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 1px red solid;
+}
+
+header {
+    background-color: var(--secondary-color);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    text-align: center;
+    margin-block-start: 30px;  
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: var(--tertiary-color);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 320px){
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+
+.star {
+    font-size: 3em;
+    color: yellow;
+    margin: 10px;
+    margin-top: 0px;
+
+    @media screen and (max-width: 320px){
+      margin: 1px;      
+     }
+
+     @media screen and (max-width: 768px){
+        margin: 1px;
+          
+       }
+}
+
+.colored-box {
+    width: 600px;
+    height: 200px;
+    background-color: var(--secondary-color);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    
+   }
+
+section {
+    margin-bottom: 3%;
+}
+
+.colored-box p {
+    color: white;
+}
+
+.exit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+
+
+}
+
+body {
+    background-color: var(--primary-color);
+
+    @media (max-width: 320px) {
+        body {
+            font-size: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .colored-box {
+        width: 100%; /* Ajuste la largeur à 100% de l'écran */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+        margin: 1px; /* Réduit la marge pour les petits écrans */
+    }
+}
