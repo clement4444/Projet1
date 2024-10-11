@@ -8,7 +8,7 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 1px red solid;
+    
 }
 
 header {
@@ -46,6 +46,22 @@ header h1 {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 768px) {
+    .box {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .box {
+        width: 60px;
+        height: 60px;
+        font-size: 1em;
+    }
+}
+
 h2 {
     color: black;
     text-align: center;
@@ -54,20 +70,32 @@ h2 {
 
 .container2 {
     display: flex;
-    flex-wrap: wrap;
+   
     justify-content: center;
     align-items: center;
     width: 400px;
     height: 50px;
     background-color: var(--secondary-color);
-    margin: 30px auto;
-    padding: 20px;
+    margin: 30px auto 30px;
+    padding: 10px 20px 30px 20px;
     border-radius: 10px;
+    gap: 10px;
 
-    @media screen and (max-width: 320px){
-        width: 100%;
-        height: auto;
+ }
+
+ @media screen and (max-width: 320px) {
+    .container2 {
+        width: 200px;
+        height: 30px;
         padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container2 {
+        width: 300px;
+        height: 40px;
+        padding: 15px;
     }
 }
 
@@ -75,18 +103,15 @@ h2 {
 .star {
     font-size: 3em;
     color: yellow;
-    margin: 10px;
-    margin-top: 0px;
-
-    @media screen and (max-width: 320px){
-      margin: 1px;      
-     }
-
-     @media screen and (max-width: 768px){
-        margin: 1px;
-          
-       }
+  
 }
+
+@media screen and (max-width: 320px) {
+    .star {
+        font-size: 3em;
+    }
+}
+
 
 .colored-box {
     width: 600px;
@@ -101,6 +126,22 @@ h2 {
     margin: auto;
     
    }
+
+   @media screen and (max-width: 768px) {
+    .colored-box {
+        width: 400px;
+        height: 150px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .colored-box {
+        width: 300px;
+        height: 100px;
+        padding: 10px;
+    }
+}
 
 section {
     margin-bottom: 3%;
@@ -118,28 +159,42 @@ section {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 50px;
+    
+}
 
-
+.exit-button:hover {
+    background-color: #005f6b;
 }
 
 body {
     background-color: var(--primary-color);
 
-    @media (max-width: 320px) {
-        body {
-            font-size: 16px;
-            margin-left: auto;
-            margin-right: auto;
-            justify-content: center;
-        }
+   
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+}
+
+
+p {
+    font-size: 24px;
+  
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .colored-box {
-        width: 100%; /* Ajuste la largeur à 100% de l'écran */
-        height: auto; /* Ajuste la hauteur automatiquement */
-        padding: 10px; /* Réduit le padding pour les petits écrans */
-        margin: 1px; /* Réduit la marge pour les petits écrans */
+    p {
+        font-size: 16px;
     }
 }
