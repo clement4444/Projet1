@@ -2,6 +2,7 @@
     --couleur_fond : rgb(0, 223, 252);
     --couleur_section : rgb(0, 140, 158);
     --couleur_foncer : rgb(0, 95, 107);
+    --couleur_noirClaire : rgb(52, 56, 56);
 }
 
 *{
@@ -90,9 +91,15 @@ main .crew .titreCrew h2{
 
 /* les filtre */
 
+main .crew .filtre{
+    display: flex;
+    margin: 0 5vw 4vw 5vw;
+    justify-content: space-between;
+}
+
 main .crew .filtre select{
     background-color: var(--couleur_foncer);
-    padding: 0.3vw;
+    padding: 0.3vw 0.5vw;
     border-radius: 50px;
     border: 3px black solid;
     font-size: 2vw;
@@ -104,4 +111,146 @@ main .crew .filtre label{
     left: 0; /* Aligne à gauche */
     background-color: white; /* Optionnel : pour cacher le select en dessous */
     padding: 0 0.2em; /* Ajoute un peu d'espace autour du texte */
+}
+
+main .crew .filtre p{
+    display: inline;
+    background-color: var(--couleur_foncer);
+    font-size: 2vw;
+    padding: 0.3vw 1vw;
+    border: 3px black solid;
+    border-radius: 50px;
+}
+
+main .crew .filtre button{
+    background-color: var(--couleur_foncer);
+    font-size: 2vw;
+    padding: 0.3vw 1vw;
+    border: 3px black solid;
+    border-radius: 50px;
+}
+
+#recherche{
+    background-color: var(--couleur_foncer);
+    font-size: 2vw;
+    padding: 0.3vw 1vw;
+    border: 3px black solid;
+    border-radius: 50px;
+}
+
+/* les profile */
+
+
+main .crew .profil{
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5vw;
+}
+
+/* le cadre des case */
+.profiltype{
+    background-color: var(--couleur_foncer);
+    border: 4px black solid;
+    position: relative;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* le crayon */
+
+.profiltype .crayon{
+    position: absolute;
+    z-index: 1;
+    display: inline;
+    font-size: 1.8em;
+    background-color: var(--couleur_foncer);
+    border: 3px rgb(0, 0, 0) solid;
+    /* padding: 5.2528% 4%; */
+    padding: 5% 5%;
+    border-radius: 50%;
+    top: -7%;
+    right: -10%;
+}
+
+
+
+.profiltype .imageTypeCadre{
+    width: 170px;
+    height: 194px;
+    overflow: hidden;
+    border: 8px solid black;
+    position: relative;
+    margin: 12px;
+    border-radius: 8px;
+}
+
+.profiltype .imageTypeCadre img{
+    position: absolute; /* Permet le positionnement précis */
+    top: 50%; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 100%;
+}
+
+
+.profiltype .profilTypeInfo{
+    background-color: white;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 40px;
+    border-radius: 50px;
+    margin-top: 15px;
+
+}
+
+.profiltype .profilTypeInfo p{
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+.profiltype .profilTypeBarre{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border: 2px black solid;
+    border-radius: 100px;
+    width: 86%;
+    height: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.profiltype .profilTypeBarre p{
+    background-color: rgb(187, 255, 0);
+    width: 50%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+main .crew .jeux{
+    display: flex;
+}
+
+main .crew .jeux button{
+    color: white;
+    background-color: var(--couleur_noirClaire);
+    font-size: 1.8em;
+    padding: 30px 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    margin: 18vh auto;
+}
+
+#darkmod{
+    background-color: var(--couleur_foncer);
+    border-radius: 50%;
+    border: 9px black solid;
 }
