@@ -249,8 +249,27 @@ main .crew .jeux button{
     margin: 18vh auto;
 }
 
+
 #darkmod{
-    background-color: var(--couleur_foncer);
+    background-color: transparent;
     border-radius: 50%;
-    border: 9px black solid;
+    border: 7px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 10;
+    bottom: 3vw;
+    right: 3vw;
 }
+
+#imageDarkmod{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: var(--couleur_section);
+    padding: 5x;
+}
+
+/* esster egg endroi cacher avec le poiter de la souri en charger */
