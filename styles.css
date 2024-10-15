@@ -31,6 +31,10 @@ header{
     height: 10em;
     margin-left: 1em;
     margin-right: 2vw;
+    @media screen and (max-width: 1024px){
+        width: 8em;
+        height: 4em;
+    }
 }
 
 .icon4{
@@ -42,6 +46,10 @@ header{
 .icon{
     width: 5em;
     height: 5em;
+    @media screen and (max-width: 1024px){
+        width: 2em;
+        height: 2em;
+    }
 }
 
 header h1{
@@ -49,6 +57,9 @@ header h1{
     font-size: 7em;
     margin: 0.1em auto 0.5em auto;
     font-family: Arial, Helvetica, sans-serif;
+    @media screen and (max-width: 1024px){
+        font-size: 3em;
+    }
 }
 
 /* le corp de la page */
@@ -59,18 +70,30 @@ main .sectionDescription{
     padding: 0em 5em 3.5em 5em;
     border: 4px black solid;
     border-radius: 55px;
+    @media screen and (max-width: 1024px){
+        margin: 2.5em 2em 0em 2em;
+        padding: 0em 3em 2em 3em;
+        border-radius: 40px;
+
+    }
 }
 
 main .sectionDescription h2{
     font-size: 4.5em;
     margin: 0.3em auto 0.4em auto;
     text-align: center;
+    @media screen and (max-width: 1024px){
+        font-size: 2em;
+    }
 }
 
 main .sectionDescription p{
     font-size: 1.3em;
     /* ⚠️ */
     text-align: center;
+    @media screen and (max-width: 1024px){
+        font-size: 1em;
+    }
 }
 
 
@@ -87,6 +110,9 @@ main .crew .titreCrew h2{
     padding: 0 0.1em 0 0.1em;
     margin: 1em auto 1em auto;
     font-size: 4.5em;
+    @media screen and (max-width: 1024px){
+        font-size: 2.5em;
+    }
 }
 
 /* les filtre */
@@ -235,6 +261,45 @@ main .crew .profil{
     border-radius: 100px;
 }
 
+/* bouton ajouter */
+
+.profil .ajouter{
+    background-color: var(--couleur_foncer);
+    border: 4px black solid;
+    border-radius: 3px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 210px;
+    height: 351px;
+    position: relative;
+}
+
+.profil .ajouter .plusVertical{
+    height: 160px;
+    width: 18px;
+    background-color: black;
+    position: absolute;
+    top: 40px;
+    left: calc(105px - 9px);
+}
+
+.profil .ajouter .plusHaurisontal{
+    height: 18px;
+    width: 160px;
+    background-color: black;
+    position: absolute;
+    top: calc(120px - 9px);
+    left: 25px;
+}
+
+.profil .ajouter .plusTexte{
+    font-size: 2.1em;
+    text-align: center;
+    margin-top: 135%;
+    font-weight:bold;
+}
+
+/* partie jeux */
+
 main .crew .jeux{
     display: flex;
 }
@@ -247,6 +312,10 @@ main .crew .jeux button{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 100px;
     margin: 18vh auto;
+    @media screen and (max-width: 1024px){
+        font-size: 1.1em;
+        padding: 15px 40px;
+    }
 }
 
 
@@ -262,6 +331,9 @@ main .crew .jeux button{
     z-index: 10;
     bottom: 3vw;
     right: 3vw;
+    @media screen and (max-width: 1024px){
+        border: 4px black solid;
+    }
 }
 
 #imageDarkmod{
@@ -270,6 +342,10 @@ main .crew .jeux button{
     border-radius: 50%;
     background-color: var(--couleur_section);
     padding: 5x;
+    @media screen and (max-width: 1024px){
+        width: 60px;
+        height: 60px;
+    }
 }
 
 /* esster egg endroi cacher avec le poiter de la souri en charger */
