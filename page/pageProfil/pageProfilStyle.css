@@ -10,7 +10,7 @@ background-color: var(--primary-color);
 div {
     width: 75px; 
     height: 75px; 
-    background-color: rgb(202, 8, 8); 
+    background-color: (173 72 72 / 0%); 
     border-radius: 50%; 
     display: flex; 
     justify-content: center;
@@ -92,8 +92,8 @@ p1 {
     width: 215px;
     height: 50px;
     background-color: rgb(255, 255, 255);
-    margin-inline-end: 28.5em;
-    margin-top: -385px;
+    margin-inline-start: 38.5em;
+    margin-top: 0px;
     display: flex;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
@@ -193,8 +193,8 @@ p5 {
 .image3 {
     width: 70px;
     height: 70px;
-    margin-top: 180px;
-    margin-inline-start: 120px;
+    margin-top: 500px;
+    margin-inline-start: 200px;
 }
 
 .image4 {
