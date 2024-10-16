@@ -8,8 +8,8 @@ background-color: var(--primary-color);
 }
 
 div {
-    width: 100px; 
-    height: 100px; 
+    width: 75px; 
+    height: 75px; 
     background-color: rgb(202, 8, 8); 
     border-radius: 50%; 
     display: flex; 
@@ -27,6 +27,18 @@ body {
     background-color: var(--primary-color);
     margin: 0;
     height: 50vh;
+}
+
+.mybutton {
+    width: 70px;           
+    height: 70px;          
+    font-size: 18px;        
+    padding: 10px 20px;    
+    border-radius: 60px;     
+    background-color: rgb(202, 8, 8);
+    color: white;           
+    border: none;         
+    cursor: pointer;        
 }
 
 main {
