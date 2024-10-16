@@ -85,7 +85,7 @@ export const data = {
             if (addPossible){
                 //ajoute une ligne utilisateur
                 let idAdd = donner.utilisateurs.length;
-                donner["utilisateurs"].push({nom : "hèlen", prenom : "leCompte", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta8", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : idAdd});
+                donner["utilisateurs"].push({nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : idAdd});
                 //met dans le bonne orde les profile
                 donner = trierIdUtilisateur(donner);
                 //met a jour la base de donner
