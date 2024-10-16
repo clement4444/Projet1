@@ -9,9 +9,9 @@ const nom = document.querySelector("#nom");
 const image = document.querySelector(".photo");
 const prenom = document.querySelector("#prenom");
 const age = document.querySelector("#age");
-const mail = document.querySelector("#mail");
+const mail = document.querySelector("#email");
 const description = document.querySelector("#description");
-const objectiPersonel = document.querySelector("#objectifPersonel");
+const objectiPersonel = document.querySelector("#objectifs");
 const instagram = document.querySelector("#instagrame");
 const linkedin = document.querySelector("#in");
 const facebook = document.querySelector("#facebookin");
@@ -22,7 +22,7 @@ const couleur = document.querySelector("#couleur");
 
 //crée variable avec id du profil selec
 let idProfilSelect;
-
+console.log(donner);
 //verifer si il a un profil selectioner
 if(donner.profilSelect !== undefined && donner.profilSelect !== null && typeof donner.profilSelect === 'number'){
     //set idprofil
@@ -34,7 +34,7 @@ if(donner.profilSelect !== undefined && donner.profilSelect !== null && typeof d
     age.value = donner.utilisateurs[idProfilSelect].age;
     mail.value = donner.utilisateurs[idProfilSelect].mail;
     description.value = donner.utilisateurs[idProfilSelect].description;
-    objectiPersonel.value = donner.utilisateurs[idProfilSelect].objectiPersonel;
+    objectiPersonel.value = donner.utilisateurs[idProfilSelect].objectifPersonel;
     instagram.value = donner.utilisateurs[idProfilSelect].instagrame;
     linkedin.value = donner.utilisateurs[idProfilSelect].in;
     facebook.value = donner.utilisateurs[idProfilSelect].facebookin;
