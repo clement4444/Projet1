@@ -175,6 +175,10 @@ main .crew .profil{
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 5vw;
+    align-items:flex-start;
+    @media screen and (max-width: 1024px){
+        margin-top: 1.5em;
+    }
 }
 
 /* le cadre des case */
@@ -187,6 +191,10 @@ main .crew .profil{
     flex-direction: column;
     align-items: center;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    @media screen and (max-width: 1024px){
+        border: 2.5px black solid;
+
+    }
 }
 /* le crayon */
 
@@ -202,9 +210,13 @@ main .crew .profil{
     border-radius: 50%;
     top: -7%;
     right: -10%;
+    @media screen and (max-width: 1024px){
+        font-size: 1.1em;
+        top: -6.5%;
+        right: -9%;
+        border: 1.5px rgb(0, 0, 0) solid;
+    }
 }
-
-
 
 .profiltype .imageTypeCadre{
     width: 170px;
@@ -214,6 +226,13 @@ main .crew .profil{
     position: relative;
     margin: 12px;
     border-radius: 8px;
+    @media screen and (max-width: 1024px){
+        width: 119px;
+        height: 135px;
+        border: 2.5px solid black;
+        border-radius: 5px;
+        margin: 0.5em;
+    }
 }
 
 .profiltype .imageTypeCadre img{
@@ -235,12 +254,21 @@ main .crew .profil{
     padding: 2px 40px;
     border-radius: 50px;
     margin-top: 15px;
+    @media screen and (max-width: 1024px){
+        min-width: 1.8em;
+        padding: 0.1em 1.3em 4px 1.3em;
+        margin-top: 0.35em;
 
+    }
 }
 
 .profiltype .profilTypeInfo p{
     font-size: 1.2em;
     display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    @media screen and (max-width: 1024px){
+        font-size: 0.7em;
+    }
 }
 
 .profiltype .profilTypeBarre{
@@ -252,6 +280,13 @@ main .crew .profil{
     height: 10px;
     display: flex;
     justify-content: left;
+    @media screen and (max-width: 1024px){
+        height: 4.5px;
+        border: 1px black solid;
+        margin-top: 0.8em;
+        margin-bottom: 0.7em;
+    }
+
 }
 
 .profiltype .profilTypeBarre p{
@@ -271,6 +306,10 @@ main .crew .profil{
     width: 210px;
     height: 351px;
     position: relative;
+    @media screen and (max-width: 1024px){
+        width: 139px;
+        height: 224px;
+    }
 }
 
 .profil .ajouter .plusVertical{
@@ -280,6 +319,12 @@ main .crew .profil{
     position: absolute;
     top: 40px;
     left: calc(105px - 9px);
+    @media screen and (max-width: 1024px){
+        height: 112px;
+        width: 11px;
+        top: 28px;
+        left: calc(66px - 5px);
+    }
 }
 
 .profil .ajouter .plusHaurisontal{
@@ -289,6 +334,12 @@ main .crew .profil{
     position: absolute;
     top: calc(120px - 9px);
     left: 25px;
+    @media screen and (max-width: 1024px){
+        height: 11px;
+        width: 112px;
+        top: calc(80px);
+        left: 10px;
+    }
 }
 
 .profil .ajouter .plusTexte{
@@ -296,6 +347,9 @@ main .crew .profil{
     text-align: center;
     margin-top: 135%;
     font-weight:bold;
+    @media screen and (max-width: 1024px){
+        font-size: 1.6em;
+    }
 }
 
 /* partie jeux */
@@ -333,6 +387,8 @@ main .crew .jeux button{
     right: 3vw;
     @media screen and (max-width: 1024px){
         border: 4px black solid;
+        bottom: 10vw;
+        right: 5vw;
     }
 }
 
