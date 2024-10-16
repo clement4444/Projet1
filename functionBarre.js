@@ -16,7 +16,7 @@ function caculerPourssantBarre(donner, id){
         nombreRemplie += 1;
     }
     //ajouter point statut
-    if(donner.utilisateurs[id].statut !== ""){
+    if(donner.utilisateurs[id].statut !== "none"){
         nombreRemplie += 1;
     }
     //ajouter point mail
@@ -36,9 +36,9 @@ function caculerPourssantBarre(donner, id){
         nombreRemplie += 1;
     }
     //ajouter point couleur
-    if(donner.utilisateurs[id].couleur !== ""){
-        nombreRemplie += 1;
-    }
+    // if(donner.utilisateurs[id].couleur !== ""){
+    //     nombreRemplie += 1;
+    // }
     //ajouter point instagrame
     if(donner.utilisateurs[id].resaux.instagrame !== ""){
         nombreRemplie += 1;
@@ -56,7 +56,7 @@ function caculerPourssantBarre(donner, id){
         nombreRemplie += 1;
     }
 
-    let pourssantDeRemplie = ((nombreRemplie/13)*100);
+    let pourssantDeRemplie = ((nombreRemplie/12)*100);
     return pourssantDeRemplie
 }
 

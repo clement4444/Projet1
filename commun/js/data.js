@@ -54,11 +54,11 @@ export const data = {
         donnerActuel = JSON.parse(donnerActuel);
         //verifier que les donner sont pas nul et pas forcer détre set
         if (donnerActuel == null || forcer){
-            const donnerUtilisateur = { utilisateurs : [{nom : "van der eecken", prenom : "philippe", age : 59, statut : "éleve", mail : "", desciption : "je suis philippe", objectifPersonel : "a remplir", photo:photoDefaut, couleur:"", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 0},
-                {nom : "fiquet", prenom : "clément", age : 17, statut : "éleve", mail : "france@gmail.com", desciption : "je suis clément", objectifPersonel : "a définir", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta2", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 1},
-                {nom : "yan", prenom : "yan", age : 20, statut : "éleve", mail : "", desciption : "a définir", objectifPersonel : "a définir", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta3", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 2},
-                {nom : "fabien", prenom : "fabien", age : 19, statut : "éleve", mail : "", desciption : "a définir", objectifPersonel : "a définir", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta4", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 3}
-            ], profilSelect :0, darkMod : false}
+            const donnerUtilisateur = { utilisateurs : [{nom : "van der eecken", prenom : "philippe", age : 59, statut : "éleve", mail : "", desciption : "je suis philippe", objectifPersonel : "a remplir", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 0},
+                {nom : "fiquet", prenom : "clément", age : 17, statut : "éleve", mail : "france@gmail.com", desciption : "je suis clément", objectifPersonel : "a définir", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "insta2", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 1},
+                {nom : "yan", prenom : "yan", age : 20, statut : "éleve", mail : "", desciption : "a définir", objectifPersonel : "a définir", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "insta3", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 2},
+                {nom : "fabien", prenom : "fabien", age : 19, statut : "éleve", mail : "", desciption : "a définir", objectifPersonel : "a définir", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "insta4", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 3}
+            ], profilSelect :0, darkMod : false, bakUp : "-1"}
             
             //set les donner
             localStorage.setItem('datadonner', JSON.stringify(donnerUtilisateur));
@@ -85,7 +85,7 @@ export const data = {
             if (addPossible){
                 //ajoute une ligne utilisateur
                 let idAdd = donner.utilisateurs.length;
-                donner["utilisateurs"].push({nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : idAdd});
+                donner["utilisateurs"].push({nom : "", prenom : "", age : null, statut : "none", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : idAdd});
                 //met dans le bonne orde les profile
                 donner = trierIdUtilisateur(donner);
                 //met a jour la base de donner

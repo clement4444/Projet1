@@ -375,6 +375,9 @@ main .crew .jeux button{
         padding: 15px 40px;
     }
 }
+main .crew .jeux button:hover{
+    background-color: rgb(41, 43, 43);
+}
 
 
 #darkmod{
