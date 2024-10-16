@@ -51,3 +51,18 @@ export function setEcouteJeuxCrew(BoutonJeuxCrew){
     window.location.href = './page/pageJeux/PageJeux.html';
   });
 };
+
+//bouton profil aléatoir
+export function setEcouteBoutonProfilAleatoir(){
+  const documentBoutonAleatoir = document.querySelector("#boutonAleatoir");
+
+  documentBoutonAleatoir.addEventListener('click', function(event) {
+    let donner = data.copy();
+    if (donner.utilisateurs.length > 0){
+      let nbmRandom = Math.floor(Math.random() * (donner.utilisateurs.length-1 - 0 + 1)) + 0;
+      donner.profilSelect = nbmRandom;
+      data.push(donner);
+      window.location.href = './page/pageProfil/pageProfil.html';
+    }
+  });
+};
