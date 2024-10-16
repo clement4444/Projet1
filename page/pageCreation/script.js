@@ -6,17 +6,17 @@ let donner = data.copy();
 
 //récupéré tout les zonne de saisi
 const nom = document.querySelector("#nom");
-const image = document.querySelector(".photo");
+const image = document.querySelector(".fauto");
 const prenom = document.querySelector("#prenom");
 const age = document.querySelector("#age");
 const mail = document.querySelector("#email");
 const description = document.querySelector("#description");
 const objectiPersonel = document.querySelector("#objectifs");
-const instagram = document.querySelector("#instagrame");
-const linkedin = document.querySelector("#in");
-const facebook = document.querySelector("#facebookin");
-const twitter = document.querySelector("#twitter");
-const statut = document.querySelector("#statut");
+const instagram = document.querySelector("#insta");
+const linkedin = document.querySelector("#linkedin");
+const facebook = document.querySelector("#facebook");
+const twitter = document.querySelector("#x");
+const statut = document.querySelector("#statue");
 const couleur = document.querySelector("#couleur");
 
 
