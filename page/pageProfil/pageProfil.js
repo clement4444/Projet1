@@ -5,9 +5,12 @@ data.set();
 let donner = data.copy(); 
 
 
-//récupérer les endoit a afficer
+//récupérer les endoit a afficher
 
-const nom = document.querySelector(".rectangle2");
+const nom = document.querySelector(".rectangle3");
+const prenom = document.querySelector(".rectangle2");
+const age = document.querySelector(".rectangle2");
+
 //idem pour tout les champs
 
 
@@ -15,6 +18,8 @@ const nom = document.querySelector(".rectangle2");
 
 //afficher sur la page les valeur
 nom.textContent = donner.utilisateurs[donner.profilSelect].nom;
+prenom.textContent = donner.utilisateurs[donner.profilSelect].nom;
+age.textContent = donner.utilisateurs[donner.profilSelect].nom;
 
 if(donner.utilisateurs[donner.profilSelect].badges.boutonSecrt){
     //rentre dans la condition si il a le badge bouton secret
@@ -25,9 +30,12 @@ if(donner.utilisateurs[donner.profilSelect].badges.boutonSecrt){
 
 //bouton fermer
 nom.addEventListener('change', function(event) {
+prenom.addEventListener('change', function(event) {
+
     //change de page pour revenir a la page index général
     "../../index.html"
 })
 
 
 console.log(donner);
+})
