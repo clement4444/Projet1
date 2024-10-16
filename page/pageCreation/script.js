@@ -16,15 +16,15 @@ if(donner.profilSelect !== undefined && donner.profilSelect !== null && typeof d
     //set idprofil
     idProfilSelect = donner.profilSelect;
     //charger le profil
-    nom.value = donner.utilisateurs[idProfilSelect].nom;
     image.style.backgroundImage = `url("${donner.utilisateurs[idProfilSelect].photo}")`;
+    nom.value = donner.utilisateurs[idProfilSelect].nom;
 
     //philippe rajouter toute les information a remplir
     
 }else{
     //définir id du profil au dernier de la liste
-    idProfilSelect = donner.utilisateurs.length
     donner = data.add();
+    idProfilSelect = donner.utilisateurs.length
 }
 
 

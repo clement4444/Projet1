@@ -62,7 +62,7 @@ export const data = {
                 {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta6", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 5},
                 {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta7", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 6},
                 {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta8", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 7}
-            ], profilSelect :0, darkMod : false}
+            ], profilSelect :undefined, darkMod : false}
             
             //set les donner
             localStorage.setItem('datadonner', JSON.stringify(donnerUtilisateur));
