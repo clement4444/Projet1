@@ -1,4 +1,6 @@
 //data V3
+import { photoDefaut } from "./phauto.js";
+
 export const data = {
     copy :function(){
         if (varifierdataSet()){
@@ -52,15 +54,15 @@ export const data = {
         donnerActuel = JSON.parse(donnerActuel);
         //verifier que les donner sont pas nul et pas forcer détre set
         if (donnerActuel == null || forcer){
-            const donnerUtilisateur = { utilisateurs : [{nom : "clement", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta1", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 0},
-                {nom : "phillippe", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta2", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 1},
-                {nom : "yan", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta3", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 2},
-                {nom : "fabien", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta4", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 3},
-                {nom : "yazouz", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta5", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 4},
-                {nom : "malaury", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta6", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 5},
-                {nom : "alexendre", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta7", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 6},
-                {nom : "ludocic", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:undefined, couleur:"", resaux : {instagrame : "insta8", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 7}
-            ], profilSelect : "undefined", darkMod : false}
+            const donnerUtilisateur = { utilisateurs : [{nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta1", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 0},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta2", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 1},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta3", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 2},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta4", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 3},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta5", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 4},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta6", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 5},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta7", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 6},
+                {nom : "", prenom : "", age : null, statut : "", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"", resaux : {instagrame : "insta8", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 7}
+            ], profilSelect :0, darkMod : false}
             
             //set les donner
             localStorage.setItem('datadonner', JSON.stringify(donnerUtilisateur));

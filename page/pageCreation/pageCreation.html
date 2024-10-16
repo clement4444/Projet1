@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pageCreation.css">
+    <title>Page création profil</title>
+</head>
+<body>
+    
+    <form action="">
+        <!-- image -->
+        <div class="divImage">
+            <!-- <label class="" for="fauto">choisir une photo</label> -->
+            <input class="photo" type="file" id="fauto" name="fauto">
+        </div>
+
+        <!-- nom -->
+        <div class="divInput">
+            <label class="formLabel" for="nom">Nom :</label>
+            <input class="formInput" type="text" id="nom" name="nom" placeholder="Taper votre nom ici">
+        </div>
+        
+        <!-- prenom -->
+        <div class="divInput">
+            <label class="formLabel" for="prenom">Prénom :</label>
+            <input class="formInput" type="text" id="prenom" name="prenom" placeholder="Taper votre prenom ici">
+        </div>
+
+        <!-- age -->
+        <div class="divInput">
+            <label class="formLabel" for="age">Age :</label>
+            <input class="formInput" type="number" id="age" name="age" placeholder="Entrez votre age ici">
+        </div>
+
+        <!-- adressmail -->
+        <div class="divInput">
+            <label class="formLabel" for="email">Adresse mail :</label>
+            <input class="formInput" type="email" id="email" name="email" placeholder="Taper votres adresse mail ici">
+        </div>
+
+        <!-- description -->
+        <div class="divInput">
+            <label class="formLabel" for="description">Description :</label>
+            <textarea class="formInput formMessage" id="description" name="description" placeholder="Taper votre description ici"></textarea>
+        </div>
+
+        <!-- objectifs professionnels -->
+        <div class="divInput">
+            <label class="formLabel" for="objectifs">Objectifs professionnels :</label>
+            <textarea class="formInput formMessage" id="objectifs" name="objectifs" placeholder="Taper vos objectifs professionnels ici"></textarea>
+        </div>
+
+        <!-- réseaux -->
+        <div class="divResaux">
+            <div class="divInsta">
+                <!-- insta -->
+                <img class="resauxImage" src="../../commun/image/insta.webp">
+                <label class="formLabel" for="insta">instagram :</label>
+                <input class="formInput" type="text" id="insta" name="insta" placeholder="Taper votre instagram ici">
+
+                <label class="resauxlabel" for="caseInsta">j'ai pas</label>
+                <input class="resauxCoche" type="checkbox" id="caseInsta" name="caseInsta" value="caseInsta">
+            </div>
+
+            <div class="divIn">
+                <!-- linkedin -->
+                <img class="resauxImage" src="../../commun/image/linkedin.png">
+                <label class="formLabel" for="linkedin">Linkedin :</label>
+                <input class="formInput" type="text" id="linkedin" name="linkedin" placeholder="Taper votre linkedin ici">
+
+                <label class="resauxlabel" for="caseIn">j'ai pas</label>
+                <input class="resauxCoche" type="checkbox" id="caseIn" name="caseIn" value="caseIn">
+            </div>
+
+            <div class="divFacebook">
+                <!-- facbook -->
+                <img class="resauxImage" src="../../commun/image/facebook.png">
+                <label class="formLabel" for="facebook">Facebook :</label>
+                <input class="formInput" type="text" id="facebook" name="facebook" placeholder="Taper votre Facebook ici">
+
+                <label class="resauxlabel" for="casefacebook">j'ai pas</label>
+                <input class="resauxCoche" type="checkbox" id="casefacebook" name="casefacebook" value="casefacebook">
+            </div>
+
+            <div class="divX">
+                <!-- x -->
+                <img class="resauxImage" src="../../commun/image/x.png">
+                <label class="formLabel" for="x">X :</label>
+                <input class="formInput" type="text" id="x" name="x" placeholder="Taper votre X ici">
+                
+                <label class="resauxlabel" for="caseX">j'ai pas</label>
+                <input class="resauxCoche" type="checkbox" id="caseX" name="caseX" value="caseX">
+            </div>
+        </div>
+
+        <!-- statue -->
+        <div class="divInput">
+            <label for="statue" class="formLabel">Statut :</label>
+            <select id="statue" class="formInput" name="statue">
+                <option value="none">Choisir votre statut</option>
+                <option value="eleve">éleve</option>
+                <option value="prof">prof</option>
+            </select>
+        </div>
+
+        <!-- couleur -->
+        <div class="divInput">
+            <label for="couleur" class="formLabel">Couleur :</label>
+            <select id="couleur" class="formInput" name="couleur">
+                <option value="vert">couleur vert</option>
+                <option value="vertClaire">couleur vert claire</option>
+                <option value="rose">couleur rose</option>
+                <option value="bleu">couleur bleu</option>
+                <option value="jaunne">couleur jaunne</option>
+            </select>
+        </div>
+        <div class="contenerBouton">
+            <input class="boutonSave" id="" type="submit" value="save">
+            <input class="boutonAnnuler" type="submit" value="annuler">
+        </div>
+    </form>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

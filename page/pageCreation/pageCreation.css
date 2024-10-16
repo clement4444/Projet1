@@ -1,0 +1,178 @@
+:root{
+    --couleur_fond : rgb(0, 223, 252);
+    --couleur_section : rgb(0, 140, 158);
+    --couleur_foncer : rgb(0, 95, 107);
+    --couleur_noirClaire : rgb(52, 56, 56);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--couleur_fond);
+}
+
+/* image */
+.photo{
+    margin-top: 10vh;
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-image: url(../../commun/image/yavuz-kutuk_projet_1.jpeg); */
+    border: 3px black dashed;
+    font-size: 0px;
+}
+
+
+/* reste du formulaire */
+body form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15em;
+}
+
+body form .divInput{
+    margin-top: 6vw;
+    display: flex;
+    width: 50%;
+    align-items: start;
+    position: relative;
+    @media screen and (max-width: 1024px){
+        margin-top: 12vw;
+        width: 60%;
+    }
+}
+
+body form .formInput{
+    background-color: white;
+    width: 100%;
+    padding: 0.5em 0.3em;
+    border-radius: 10px;
+    border: 3px black solid;
+    text-align: left;
+    font-size: 2em;
+    @media screen and (max-width: 1024px){
+        font-size: 1.2em;
+    }
+}
+
+body form .formLabel{
+    background-color: transparent;
+    position: absolute;
+    top: -1.17em;
+    left: 0.2em;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    @media screen and (max-width: 1024px){
+        font-size: 1.2em;
+    }
+}
+
+.formMessage{
+    min-height: 10em;
+    resize: vertical;
+    white-space: pre-wrap;
+    overflow: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* les réseaux */
+
+.divResaux{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6vw;
+    width: 100%;
+    justify-content: center;
+    margin-top: 9vw;
+    justify-content: space-evenly;
+    @media screen and (max-width: 1024px){
+        gap: 13vw;
+    }
+
+}
+
+.divResaux div{
+    position: relative;
+    width: 30vw;
+    @media screen and (max-width: 1024px){
+        width: 60vw;
+    }
+
+}
+
+.resauxImage{
+    width: 3em;
+    position: absolute;
+    left: -65px;
+    top: 15px;
+    @media screen and (max-width: 1024px){
+        top: 0px;
+    }
+
+}
+
+.resauxCoche{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: -100px;
+    top: 5px;
+    @media screen and (max-width: 1024px){
+        width: 40px;
+        height: 40px;
+        right: -80px;
+    }
+
+}
+
+.resauxlabel{
+    position: absolute;
+    right: -93px;
+    top: 70px;
+    font-family: 'Roboto', sans-serif;
+    @media screen and (max-width: 1024px){
+        right: -85px;
+        top: 50px;
+    }
+}
+
+
+/* les bouton save et annuler */
+
+.boutonSave, .boutonAnnuler{
+    font-size: 2.8em;
+    font-family: 'Roboto', sans-serif;
+    position: fixed;
+    padding-top: 0.4em;
+    padding-bottom: 0.5em;
+    width: 7em;
+    border: 4px black solid;
+    border-radius: 1000px;
+    bottom: 30px;
+    @media screen and (max-width: 1024px){
+        font-size: 1.2em;
+    }
+}
+
+.boutonSave{
+    background-color: greenyellow;
+    left: 20vw;
+    @media screen and (max-width: 1024px){
+        left: 15vw;
+    }
+}
+
+.boutonAnnuler{
+    background-color: red;
+    right: 20vw;
+    @media screen and (max-width: 1024px){
+        right: 15vw;
+    }
+}
