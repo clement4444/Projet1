@@ -12,36 +12,36 @@
         <button type="button"></button>
         <section class="partie1">
             <div class="divReseaux">
-                <img src="../../commun/image/yavuz-kutuk_projet_1.jpeg" alt="">
+                <img id="profilPhoto" src="../../commun/image/yavuz-kutuk_projet_1.jpeg" alt="">
                 <div>
-                    <img src="../../commun/image/insta.webp" alt="logo insta">
-                    <img src="../../commun/image/linkedin.png" alt="logo in">
-                    <img src="../../commun/image/facebook.png" alt="logo facbook">
-                    <img src="../../commun/image/x.png" alt="logo x">
+                    <img id="profilInsta" src="../../commun/image/insta.webp" alt="logo insta">
+                    <img id="profilLinkedin" src="../../commun/image/linkedin.png" alt="logo linkedin">
+                    <img id="profilFacebook" src="../../commun/image/facebook.png" alt="logo facbook">
+                    <img id="profilX" src="../../commun/image/x.png" alt="logo x">
                 </div>
             </div>
             <div class="divInofo">
-                <h2 class="titreInfo">vue de profil</h2>
+                <h2 class="titreInfo">Vue de profil</h2>
                 <div class="divElementInfo">
                     <div>
                         <h3 class="infoProfilNom">Prénom :</h3>
-                        <p class="infoProfilP">superlongnommega</p>
+                        <p id="profilPrénom" class="infoProfilP">superlongnommega</p>
                     </div>
                     <div>
                         <h3 class="infoProfilNom">nom :</h3>
                         <p id="profilNom" class="infoProfilP">sfdgfhf</p>
                     </div>
                     <div>
-                        <h3 class="infoProfilNom">age :</h3>
-                        <p class="infoProfilP">fdgfhhf</p>
+                        <h3 class="infoProfilNom">âge :</h3>
+                        <p id="profilAge"class="infoProfilP">fdgfhhf</p>
                     </div>
                     <div>
                         <h3 class="infoProfilNom">Statut :</h3>
-                        <p class="infoProfilP">hfghgh</p>
+                        <p id="profilStatut" class="infoProfilP">hfghgh</p>
                     </div>
                     <div>
                         <h3 class="infoProfilNom">Adresse mail :</h3>
-                        <p class="infoProfilP">zffd</p>
+                        <p id="profilAdresseMail" class="infoProfilP">zffd</p>
                     </div>
                 </div>
             </div>
@@ -49,19 +49,19 @@
         <section class="partie2">
             <div class="divDesciption">
                 <p class="titreInfo">Description</p>
-                <p class="grandInfo">fddfuyufbso fbt fb</p>
+                <p id="Desciption" class="grandInfo">fddfuyufbso fbt fb</p>
             </div>
             <div class="divObjectif">
                 <p class="titreInfo">Objectif professionnels</p>
-                <p class="grandInfo">blabla fdyhfgyidgf </p>
+                <p id="objectifPersonel" class="grandInfo">blabla fdyhfgyidgf </p>
             </div>
         </section>
         <section class="sectionBage">
             <h2>Badges:</h2>
             <div class="bloxBadge">
                 <div>
-                    <img src="./public/100-badge-ribbon-png.webp" alt="badge">
-                    <p>profil 100%</p>
+                    <img id="badgeImg100Profil" src="./public/100-badge-ribbon-png.webp" alt="badge">
+                    <p id="badgeText100Profil">profil 100%</p>
                 </div>
                 <div>
                     <img src="./public/10ème compte.png" alt="badge">
@@ -108,5 +108,6 @@
         </section>
     </footer>
     <script src="pageProfil.js" type="module"></script>
+    <script src="gestionBadge.js" type="module"></script>
 </body>
 </html>

@@ -289,3 +289,7 @@ main > button{
         margin: 2.5vw 0 1vw 0;
     }
 }
+
+.invisible{
+    display: none;
+}
