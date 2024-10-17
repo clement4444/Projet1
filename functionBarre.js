@@ -91,6 +91,9 @@ export function setBarre(id, documentListProfil, donner){
     //définir la couleur et l'appliquer
     const couleurBarre = defcouleurBarre(pourssantDeRemplie);
     documentBarre.style.backgroundColor = `rgb(${couleurBarre})`;
+    if(pourssantDeRemplie >= 100){
+        donner.utilisateurs[id].badges.profil100 = true;
+    }
 }
 
 

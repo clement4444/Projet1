@@ -99,16 +99,45 @@
     <button class="exit-button">
         <img src="../pageJeux/public/icons8-exit-64.png" alt="Exit" />
     </button>
+
     <!-- The Modal (hidden by default) -->
     <div id="myModal" class="modal">
-    
-    <!-- Modal Content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Modal Title</h2>
-        <p>This is a simple modal.</p>
+        <!-- Modal Content -->
+        <div class="modal-content">
+            <div class="modalFlex">
+                <!-- <span class="close">&times;</span> -->
+                <p class="modalTitre">Choisir à qui vous attribuez le badge</p>
+                <div class="modalDivBadge">
+                    <div class="modalImgBadge"></div>
+                    <p>100% jeux <br/>des wilderes</p>
+                </div>
+                <div class="modalDiv3">
+                    <div class="modalProfilType">
+                        <div class="modalImage"></div>
+                        <div>
+                            <p class="modalNom">nom</p>
+                            <p class="modalPrenom">prenom</p>
+                        </div>
+                    </div>
+                    <div class="modalProfilType">
+                        <div class="modalImage"></div>
+                        <div>
+                            <p class="modalNom">nom</p>
+                            <p class="modalPrenom">prenom</p>
+                        </div>
+                    </div>
+                    <div class="modalProfilType">
+                        <div class="modalImage"></div>
+                        <div>
+                            <p class="modalNom">nom</p>
+                            <p class="modalPrenom">prenom</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
+
     </main>
 
     <footer>
@@ -148,6 +177,6 @@
     </section>
     </footer>
     <script src="./PageJeuxScript.js" type="module"></script>
-    <script src="modal.js"></script>
+    <script src="modal.js" type="module"></script>
 </body>
 </html>

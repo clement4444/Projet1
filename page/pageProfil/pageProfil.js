@@ -5,6 +5,12 @@ import { setEcouteCroixFermer } from "./setEcoute.js";
 setEcouteCroixFermer();
 let donner = data.copy();
 
+//ajouter badge 10eme compte
+if(donner.profilSelect == 9){
+    donner.utilisateurs[donner.profilSelect].badges.compte10 = true;
+    data.push(donner);
+}
+
 //pour la photo
 const documentPhoto = document.querySelector("#profilPhoto");
 documentPhoto.src = donner.utilisateurs[donner.profilSelect].photo;
@@ -25,7 +31,11 @@ documentAge.innerHTML = donner.utilisateurs[donner.profilSelect].age;
 
 //pour le statut
 const documentStatut = document.querySelector("#profilStatut");
-documentStatut.innerHTML = donner.utilisateurs[donner.profilSelect].statut;
+if(donner.utilisateurs[donner.profilSelect].statut !== "none"){
+    documentStatut.innerHTML = donner.utilisateurs[donner.profilSelect].statut;
+}else{
+    documentStatut.innerHTML ="";
+}
 
 //pour l'adresse mail
 const documentMail = document.getElementById("profilAdresseMail");

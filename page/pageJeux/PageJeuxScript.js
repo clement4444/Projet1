@@ -37,6 +37,9 @@ cards.forEach((card) => {
         correctCards[0].classList.remove("clicked");
         correctCards[1].classList.add("checked");
         correctCards[1].classList.remove("clicked");
+
+        // Vérifier si toutes les cartes sont appariées (victoire)
+        checkForWin();
       } else {
         const incorrectCards = document.querySelectorAll(".card.clicked");
 
@@ -65,7 +68,6 @@ function updateLives() {
     if (lives === 0) {
       setTimeout(() => {
         alert('Game Over');
-        afficherModal();
         resetGame();
       }, 500);
     }
@@ -77,7 +79,21 @@ function updateLives() {
     cards.forEach(card => card.classList.remove('clicked', 'checked'));
     shuffle();
   }
-  
+
+  function checkForWin() {
+    const totalChecked = document.querySelectorAll('.card.checked').length;
+    if (totalChecked === cards.length) {
+      setTimeout(() => {
+        if(donner.utilisateurs.length > 0){
+          afficherModal();
+        }
+        resetGame(); // Optionnel : Réinitialiser le jeu après la victoire
+      }, 500);
+    }
+  }
+
+
+
   function shuffle() {
     cards.forEach(card => {
       let randomPos = Math.floor(Math.random() * 16);
@@ -87,4 +103,5 @@ function updateLives() {
   
   shuffle();
 
+  // afficherModal();
  

@@ -181,6 +181,7 @@ body form .formLabel{
 .boutonSave{
     background-color: greenyellow;
     left: 20vw;
+    /* z-index: 1; */
     @media screen and (max-width: 1024px){
         left: 15vw;
     }
@@ -193,6 +194,7 @@ body form .formLabel{
 .boutonAnnuler{
     background-color: red;
     right: 20vw;
+    /* z-index: 1; */
     @media screen and (max-width: 1024px){
         right: 15vw;
     }
