@@ -422,3 +422,22 @@ main .crew .jeux button:hover{
 }
 
 /* esster egg endroi cacher avec le poiter de la souri en charger */
+
+/* style.css darkMode*/
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-mode {
+    background-color: var(--couleur_fond);
+   
+}
+
+body.dark-mode {
+    background-color: rgb(84, 94, 94);
+    
+}
+
+.darkmodBouton {
+    cursor: pointer;
+}
