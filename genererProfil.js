@@ -4,7 +4,6 @@ import { htmlPlus } from "./htmlCode.js";
 import { setBarre } from "./functionBarre.js";
 import { setEcoute } from "./functionEcoute.js";
 import { changerCouleurProfil } from "./functionCouleurProfil.js";
-import { filtre } from "./filtre.js";
 
 
 export function spawProfil(){
@@ -19,16 +18,12 @@ export function spawProfil(){
     const documentNombreProfil = document.querySelector(".filtre > p");
     documentNombreProfil.innerHTML = `${listeProfil.length}👨‍💻`;
 
-    //appliquer les filtre
-    // listeProfil = filtre(listeProfil);     a voir ici
-
-
     //inisaliser la variable injection de code
     let htmlTousProfil = "";
 
     //crée les profil prét a injecter en html
-    for(let profil of listeProfil){
-        htmlTousProfil+= htmlProfil(donner, profil.id);
+    for(let i=0; i<listeProfil.length; i++){
+        htmlTousProfil+= htmlProfil(donner, i);
     }
 
     //additionner les profil a injecter
