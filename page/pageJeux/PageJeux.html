@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="../pageJeux/PageJeuxStyles.css" />
     <link rel="stylesheet" href="../../commun/css/footer.css" />
     <title>jeu des wilders</title>
-    ../../commun/
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <section>
+    <section>
         <h1>Le Jeu des Wilders</h1>
-      </section>
+    </section>
     </header>
 
     <main>
-      <h2>vies restantes</h2>
+    <h2>vies restantes</h2>
 
-      <section>
+    <section>
         <div class="container2">
-          <div class="star">★</div>
-          <div class="star">★</div>
-          <div class="star">★</div>
-          <div class="star">★</div>
-          <div class="star">★</div>
-          <div class="star">★</div>
+        <div class="star">★</div>
+        <div class="star">★</div>
+        <div class="star">★</div>
+        <div class="star">★</div>
+        <div class="star">★</div>
+        <div class="star">★</div>
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <div class="container">
-          <h2 class="heading">Memory Game</h2>
-          <div class="cards">
+        <h2 class="heading">Memory Game</h2>
+        <div class="cards">
             <div class="card" personnage="homme1">
-              <img src="../../page/pageJeux/public/image homme 1.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 1.png" alt="" />
             </div>
             <div class="card" personnage="femme1">
-              <img src="../../page/pageJeux/public/image femme 1.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 1.png" alt="" />
             </div>
             <div class="card" personnage="homme2">
-              <img src="../../page/pageJeux/public/image homme 2.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 2.png" alt="" />
             </div>
             <div class="card" personnage="femme2">
-              <img src="../../page/pageJeux/public/image femme 2.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 2.png" alt="" />
             </div>
             <div class="card" personnage="homme3">
-              <img src="../../page/pageJeux/public/image homme 3.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 3.png" alt="" />
             </div>
             <div class="card" personnage="femme3">
-              <img src="../../page/pageJeux/public/image femme 3.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 3.png" alt="" />
             </div>
             <div class="card" personnage="homme1">
-              <img src="../../page/pageJeux/public/image homme 1.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 1.png" alt="" />
             </div>
             <div class="card" personnage="homme2">
-              <img src="../../page/pageJeux/public/image homme 2.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 2.png" alt="" />
             </div>
             <div class="card" personnage="homme3">
-              <img src="../../page/pageJeux/public/image homme 3.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 3.png" alt="" />
             </div>
             <div class="card" personnage="femme1">
-              <img src="../../page/pageJeux/public/image femme 1.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 1.png" alt="" />
             </div>
             <div class="card" personnage="femme3">
-              <img src="../../page/pageJeux/public/image femme 3.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 3.png" alt="" />
             </div>
             <div class="card" personnage="homme4">
-              <img src="../../page/pageJeux/public/image homme 4.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 4.png" alt="" />
             </div>
             <div class="card" personnage="femme2">
-              <img src="../../page/pageJeux/public/image femme 2.png" alt="" />
+            <img src="../../page/pageJeux/public/image femme 2.png" alt="" />
             </div>
             <div class="card" personnage="homme5">
-              <img src="../../page/pageJeux/public/image homme 5.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 5.png" alt="" />
             </div>
             <div class="card" personnage="homme5">
-              <img src="../../page/pageJeux/public/image homme 5.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 5.png" alt="" />
             </div>
             <div class="card" personnage="homme4">
-              <img src="../../page/pageJeux/public/image homme 4.png" alt="" />
+            <img src="../../page/pageJeux/public/image homme 4.png" alt="" />
             </div>
-          </div>
         </div>
-      </section>
+        </div>
+    </section>
 
-      <section>
+    <section>
         <div class="colored-box">
-          <p>
+        <p>
             Le principe du jeu est de retrouver les paires de cartes identiques
             en les retournant 2 par 2. Si les cartes retournées sont identiques
             (une paire) vous gagnez. Vous disposez de six vies pour réaliser ce
             memory.
-          </p>
+        </p>
         </div>
-      </section>
+    </section>
 
-      <button class="exit-button">
+    <button class="exit-button">
         <img src="../pageJeux/public/icons8-exit-64.png" alt="Exit" />
-      </button>
+    </button>
+    <!-- The Modal (hidden by default) -->
+    <div id="myModal" class="modal">
+    
+    <!-- Modal Content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is a simple modal.</p>
+    </div>
+    </div>
     </main>
 
     <footer>
-      <h2>Navigation</h2>
-      <nav>
+    <h2>Navigation</h2>
+    <nav>
         <div class="navAccueil">
-          <img src="../../commun/image/maison.png" alt="icon Accueil" />
-          <p>Accueil</p>
+        <img src="../../commun/image/maison.png" alt="icon Accueil" />
+        <p>Accueil</p>
         </div>
         <div class="navVueProfile">
-          <img src="../../commun/image/emoji-livre.png" alt="icon livre" />
-          <p>Vue de profil</p>
+        <img src="../../commun/image/emoji-livre.png" alt="icon livre" />
+        <p>Vue de profil</p>
         </div>
         <div class="navCreeProfil">
-          <img src="../../commun/image/emoji-ciseaux.png" alt="icon-ciseux" />
-          <p>Crée profil</p>
+        <img src="../../commun/image/emoji-ciseaux.png" alt="icon-ciseux" />
+        <p>Crée profil</p>
         </div>
         <div class="navJeux">
-          <img
+        <img
             src="../../commun/image/emoji-manette.png"
             alt="icon mannette de jeux"
-          />
-          <p>jeux des wilders</p>
+        />
+        <p>jeux des wilders</p>
         </div>
-      </nav>
-      <img
+    </nav>
+    <img
         id="footerWild"
         src="../../commun/image/Logo_will_code_school.png"
         alt="logo de la wild"
-      />
-      <p>©Wild Code School 2024/2025</p>
-      <section class="navFondateur">
+    />
+    <p>©Wild Code School 2024/2025</p>
+    <section class="navFondateur">
         <p>Clement Fiquet</p>
         <p>Philippe Van Der Eecken</p>
         <p>Yann kanhon</p>
         <p>Fabien Verhulst</p>
-      </section>
+    </section>
     </footer>
     <script src="./PageJeuxScript.js" type="module"></script>
-  </body>
+    <script src="modal.js"></script>
+</body>
 </html>

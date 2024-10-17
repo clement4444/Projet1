@@ -196,6 +196,9 @@ main .crew .profil{
 
     }
 }
+.profiltype:hover{
+    cursor: pointer;
+}
 /* le crayon */
 
 .profiltype .crayon{
@@ -216,6 +219,9 @@ main .crew .profil{
         right: -9%;
         border: 1.5px rgb(0, 0, 0) solid;
     }
+}
+.profiltype .crayon:hover{
+    cursor: pointer;
 }
 
 .profiltype .imageTypeCadre{
@@ -315,6 +321,9 @@ main .crew .profil{
         height: 224px;
     }
 }
+.profil .ajouter:hover{
+    cursor: pointer;
+}
 
 .profil .ajouter .plusVertical{
     height: 160px;
@@ -377,6 +386,7 @@ main .crew .jeux button{
 }
 main .crew .jeux button:hover{
     background-color: rgb(41, 43, 43);
+    cursor: pointer;
 }
 
 

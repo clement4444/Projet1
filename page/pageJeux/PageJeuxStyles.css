@@ -8,7 +8,6 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 
 header {
@@ -22,9 +21,12 @@ header {
 header h1 {
     color: white;
     text-align: center;
-    margin-block-start: 30px;
-    text-size-adjust: 10px; 
-    
+    margin-block-start: 3vw;
+    text-size-adjust: 10px;
+    font-size: 3vw;
+    @media screen and (max-width: 1024px){
+      font-size: 7vw;
+    }
 }
 
 .container {

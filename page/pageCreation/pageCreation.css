@@ -28,6 +28,7 @@ body > button{
 }
 body > button:hover{
     background-color: rgb(204, 19, 19);
+    cursor: pointer;
 }
 
 /* image */
@@ -186,6 +187,7 @@ body form .formLabel{
 }
 .boutonSave:hover{
     background-color: rgb(123, 175, 44);
+    cursor: pointer;
 }
 
 .boutonAnnuler{
@@ -197,4 +199,5 @@ body form .formLabel{
 }
 .boutonAnnuler:hover{
     background-color: rgb(185, 22, 22);
+    cursor: pointer;
 }
