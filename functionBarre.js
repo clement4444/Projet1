@@ -1,4 +1,5 @@
 import { photoDefaut } from "./commun/js/phauto.js";
+import { data } from "../../commun/js/data.js";
 
 
 function caculerPourssantBarre(donner, id){
@@ -94,6 +95,7 @@ export function setBarre(id, documentListProfil, donner){
     if(pourssantDeRemplie >= 100){
         donner.utilisateurs[id].badges.profil100 = true;
     }
+    data.push(donner);
 }
 
 
