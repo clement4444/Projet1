@@ -47,6 +47,7 @@ export function setEcouteBoutonAjouter(boutonAjouter, donner){
 
 //bouton jeux crew
 export function setEcouteJeuxCrew(BoutonJeuxCrew){
+  console.log(BoutonJeuxCrew);
   BoutonJeuxCrew.addEventListener('click', function(event) {
     //emecher le rafairchissement
     event.preventDefault();
@@ -56,15 +57,20 @@ export function setEcouteJeuxCrew(BoutonJeuxCrew){
 
 //bouton profil aléatoir
 export function setEcouteBoutonProfilAleatoir(){
+  //bouton profil aléatoir
   const documentBoutonAleatoir = document.querySelector("#boutonAleatoir");
 
   documentBoutonAleatoir.addEventListener('click', function(event) {
-    let donner = data.copy();
+    profilAleatoir();
+  });
+};
+
+export function profilAleatoir(){
+  let donner = data.copy();
     if (donner.utilisateurs.length > 0){
       let nbmRandom = Math.floor(Math.random() * (donner.utilisateurs.length-1 - 0 + 1)) + 0;
       donner.profilSelect = nbmRandom;
       data.push(donner);
       window.location.href = './page/pageProfil/pageProfil.html';
     }
-  });
-};
+}

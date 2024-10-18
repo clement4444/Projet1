@@ -112,7 +112,7 @@ const documentLinkedin = document.querySelector("#profilLinkedin");
 //verifier qu'il a un lien
 if(donner.utilisateurs[donner.profilSelect].resaux.in !== "" && donner.utilisateurs[donner.profilSelect].resaux.in !== "-1"){
     documentLinkedin.addEventListener('click', function(event) {
-        window.open(`https://www.linkedin.com/${donner.utilisateurs[donner.profilSelect].resaux.in}/`, "_blank");
+        window.open(`https://www.linkedin.com/in/${donner.utilisateurs[donner.profilSelect].resaux.in}/`, "_blank");
     });
 }else{
     //cacher

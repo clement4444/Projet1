@@ -5,12 +5,12 @@ import { setEcouteBoutonProfilAleatoir } from "./functionEcoute.js";
 import { spawProfil } from "./genererProfil.js";
 
 //set la base de donner
-let donner = data.set();
+let donner = data.set(true);
 
 
 spawProfil();   
 //récupéré le bouton jeux craw
-const documentBoutonJeuxCrew = document.querySelector(".jeux");
+const documentBoutonJeuxCrew = document.querySelector(".jeux button");
 
 let documentBoutonAjouter = document.querySelector(".ajouter");
 

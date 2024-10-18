@@ -335,6 +335,7 @@ main .crew .profil{
 }
 .profil .ajouter:hover{
     cursor: pointer;
+    border: 4px rgb(0, 255, 0) solid;
 }
 
 .profil .ajouter .plusVertical{
