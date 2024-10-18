@@ -15,7 +15,7 @@ body{
 }
 
 main > button{
-    background-color: red;
+    background-color: rgb(213, 15, 15);
     padding: 4em;
     border-radius: 100px;
     border: black 3px solid;
@@ -32,6 +32,10 @@ main > button{
         right: 1em;
         top: 1em;
     }
+}
+main > button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
 }
 
 /* partie 1 */

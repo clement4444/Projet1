@@ -155,6 +155,11 @@ main .crew .filtre button{
     border: 3px black solid;
     border-radius: 50px;
 }
+main .crew .filtre button:hover{
+    cursor: pointer;
+    background-color: rgb(13, 144, 164);
+
+}
 
 #recherche{
     background-color: var(--couleur_foncer);

@@ -8,15 +8,58 @@ let donner = data.copy();
 
 //ajouter badge 10eme compte
 if(donner.profilSelect == 9){
-    donner.utilisateurs[donner.profilSelect].badges.compte10 = true;
-    data.push(donner);
+    //variable qui retien les autre 10eme compte
+    let autre10compte = false;
+    for(const compte of donner.utilisateurs){
+        if (compte.badges.compte10){
+            autre10compte = true;
+        }
+    }
+    if(!autre10compte){
+        donner.utilisateurs[donner.profilSelect].badges.compte10 = true;
+        data.push(donner);
+    }
 }
+console.log(donner);
+
+function backgroundColor(documentObjet){
+    let couleur;
+    if(donner.utilisateurs[donner.profilSelect].couleur === "vert"){
+        couleur = "0, 95, 107";
+    }else if(donner.utilisateurs[donner.profilSelect].couleur === "vertClaire"){
+        couleur = "23, 133, 17";
+    }else if(donner.utilisateurs[donner.profilSelect].couleur === "rose"){
+        couleur = "95, 14, 80";
+    }else if(donner.utilisateurs[donner.profilSelect].couleur === "bleu"){
+        couleur = "14, 21, 105";
+    }else if(donner.utilisateurs[donner.profilSelect].couleur === "jaunne"){
+        couleur = "107, 98, 0";
+    }
+    documentObjet.style.backgroundColor = `rgb(${couleur})`
+}
+
+//set le fond en fonction de la couleur du profil
+const documentDivInofo = document.querySelector(".divInofo");
+const documentDivDesciption = document.querySelector(".divDesciption");
+const documentDivObjectif = document.querySelector(".divObjectif");
+const documentH2Badges = document.querySelector(".sectionBage h2");
+//les 4 fond de badges
+const documentBadges = document.querySelectorAll(".bloxBadge div");
+//mettre le fond de couleur pour les section
+backgroundColor(documentDivInofo);
+backgroundColor(documentDivDesciption);
+backgroundColor(documentDivObjectif);
+backgroundColor(documentH2Badges);
+//mettre le fond pour les badges
+for(let i of documentBadges){
+    backgroundColor(i);
+}
+
+
 
 //pour la photo
 const documentPhoto = document.querySelector("#profilPhoto");
 documentPhoto.src = donner.utilisateurs[donner.profilSelect].photo;
-
-
 
 // pour le prénom
 const documentPrénom = document.querySelector("#profilPrénom");

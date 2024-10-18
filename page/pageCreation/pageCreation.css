@@ -18,7 +18,7 @@ body{
 body > button{
     font-size: 3em;
     padding: 0.3em;
-    background-color: red;
+    background-color: rgb(204, 19, 19);
     border: 4px black solid;
     border-radius: 0px 0px 30px 0px;
     @media screen and (max-width: 1024px){
@@ -27,7 +27,7 @@ body > button{
     }
 }
 body > button:hover{
-    background-color: rgb(204, 19, 19);
+    background-color: rgb(255, 0, 0);
     cursor: pointer;
 }
 
@@ -179,7 +179,7 @@ body form .formLabel{
 }
 
 .boutonSave{
-    background-color: greenyellow;
+    background-color: rgb(132, 200, 31);
     left: 20vw;
     /* z-index: 1; */
     @media screen and (max-width: 1024px){
@@ -187,12 +187,12 @@ body form .formLabel{
     }
 }
 .boutonSave:hover{
-    background-color: rgb(123, 175, 44);
+    background-color: greenyellow;
     cursor: pointer;
 }
 
 .boutonAnnuler{
-    background-color: red;
+    background-color: rgb(212, 17, 17);
     right: 20vw;
     /* z-index: 1; */
     @media screen and (max-width: 1024px){
@@ -200,6 +200,6 @@ body form .formLabel{
     }
 }
 .boutonAnnuler:hover{
-    background-color: rgb(185, 22, 22);
+    background-color: rgb(255, 0, 0);
     cursor: pointer;
 }

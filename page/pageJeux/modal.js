@@ -53,7 +53,8 @@ export function afficherModal(){
         documentNom.innerHTML = donner.utilisateurs[profilChoisi[i]].nom;
         const documentPrnom = documentProfil[i].querySelector(".modalPrenom");
         documentPrnom.innerHTML = donner.utilisateurs[profilChoisi[i]].prenom;
-
+        //mettre la couleur du fond
+        backgroundColor(documentProfil[i], profilChoisi[i]);
         //détection de clik + donner badge
         documentProfil[i].addEventListener('click', function() {
             donner.utilisateurs[profilChoisi[i]].badges.jeux = true;
@@ -73,4 +74,21 @@ function profilTypeHTML(){
         <p class="modalNom">nom</p>
     </div>
 </div>`
+}
+
+function backgroundColor(documentObjet, i){
+    const donner = data.copy();
+    let couleur;
+    if(donner.utilisateurs[i].couleur === "vert"){
+        couleur = "0, 95, 107";
+    }else if(donner.utilisateurs[i].couleur === "vertClaire"){
+        couleur = "23, 133, 17";
+    }else if(donner.utilisateurs[i].couleur === "rose"){
+        couleur = "95, 14, 80";
+    }else if(donner.utilisateurs[i].couleur === "bleu"){
+        couleur = "14, 21, 105";
+    }else if(donner.utilisateurs[i].couleur === "jaunne"){
+        couleur = "107, 98, 0";
+    }
+    documentObjet.style.backgroundColor = `rgb(${couleur})`
 }
