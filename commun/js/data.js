@@ -1,6 +1,5 @@
-//data V3
 import { photoDefaut, photoPhilippe, photoFabien, photoClement} from "./phauto.js";
-
+//V3
 export const data = {
     copy :function(){
         if (varifierdataSet()){
