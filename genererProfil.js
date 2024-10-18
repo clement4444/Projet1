@@ -1,4 +1,4 @@
-import { data } from "../../commun/js/data.js";
+import { data } from "./commun/js/data.js";
 import { htmlProfil } from "./htmlCode.js";
 import { htmlPlus } from "./htmlCode.js";
 import { setBarre } from "./functionBarre.js";

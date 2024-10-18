@@ -1,5 +1,5 @@
 import { photoDefaut } from "./commun/js/phauto.js";
-import { data } from "../../commun/js/data.js";
+import { data } from "./commun/js/data.js";
 
 
 function caculerPourssantBarre(donner, id){
