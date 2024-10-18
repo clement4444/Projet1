@@ -5,7 +5,7 @@ import { setEcouteBoutonProfilAleatoir } from "./functionEcoute.js";
 import { spawProfil } from "./genererProfil.js";
 
 //set la base de donner
-let donner = data.set(true);
+let donner = data.set();
 
 
 spawProfil();   
