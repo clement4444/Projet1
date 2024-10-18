@@ -69,8 +69,8 @@ function profilTypeHTML(){
     return `<div class="modalProfilType">
     <div class="modalImage"></div>
     <div>
-        <p class="modalNom">nom</p>
         <p class="modalPrenom">prenom</p>
+        <p class="modalNom">nom</p>
     </div>
 </div>`
 }

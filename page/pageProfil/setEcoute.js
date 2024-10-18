@@ -3,6 +3,6 @@ export function setEcouteCroixFermer(){
 
     documentBoutonCroix.addEventListener('click', function() {
         //changer la page vers la page de profil
-        window.location.href = '../../index.html';
+        window.location.href = '../../index.html#leCrew';
       });
 }

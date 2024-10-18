@@ -1,5 +1,6 @@
-//ici
-console.log("ok");
+import { data } from "./commun/js/data.js";
+
+let donner = data.copy();
 
 // darkMode.js
 document.addEventListener('DOMContentLoaded', () => {
@@ -7,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageDarkmod = document.getElementById('imageDarkmod');
 
     // Vérifie le mode actuel et applique-le
-    if (localStorage.getItem('theme') === 'dark') {
+    if (donner.darkMod) {
         document.body.classList.add('dark-mode');
         imageDarkmod.src = './commun/image/lune.png';
     } else {
@@ -22,10 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Change l'image du bouton
         if (document.body.classList.contains('dark-mode')) {
             imageDarkmod.src = './commun/image/lune.png';
-            localStorage.setItem('theme', 'dark');
+            donner.darkMod = true;
         } else {
             imageDarkmod.src = './commun/image/soleil.png';
-            localStorage.setItem('theme', 'light');
+            donner.darkMod=false;
         }
+        data.push(donner);
     });
 });

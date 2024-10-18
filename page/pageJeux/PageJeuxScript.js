@@ -2,6 +2,7 @@ import { setEcoutBoutonExit } from "./PageJeuxEcoute.js";
 import {data} from "../../commun/js/data.js";
 import { afficherModal } from "./modal.js";
 
+
 let donner = data.copy();
 
 

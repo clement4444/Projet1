@@ -1,7 +1,6 @@
 import { data } from "../../commun/js/data.js";
 
 const donner = data.copy();
-console.log(donner);
 
 //badge profil a 100%
 const documentBadgeTexte100Profil = document.querySelector("#badgeText100Profil");
@@ -15,10 +14,6 @@ if(!donner.utilisateurs[donner.profilSelect].badges.profil100){
 const documentBadgeTexte10Compte = document.querySelector("#badgeText10Compte");
 const documentBadgeImg10Compte = document.querySelector("#badgeImg10Compte");
 if(!donner.utilisateurs[donner.profilSelect].badges.compte10){
-<<<<<<< HEAD
-=======
-    console.log("ok");
->>>>>>> 642b9d4b9b090534ba49d81d3ddc758abbccb3c3
     documentBadgeTexte10Compte.classList.add('invisible');
     documentBadgeImg10Compte.src = "./public/point interrogation.png";
 }
@@ -27,10 +22,6 @@ if(!donner.utilisateurs[donner.profilSelect].badges.compte10){
 const documentBadgeTexteBoutonSecret = document.querySelector("#badgeTextBoutonSecret");
 const documentBadgeImgBoutonSecret = document.querySelector("#badgeImgBoutonSecret");
 if(!donner.utilisateurs[donner.profilSelect].badges.boutonSecrt){
-<<<<<<< HEAD
-=======
-    console.log("ok");
->>>>>>> 642b9d4b9b090534ba49d81d3ddc758abbccb3c3
     documentBadgeTexteBoutonSecret.classList.add('invisible');
     documentBadgeImgBoutonSecret.src = "./public/point interrogation.png";
 }
@@ -39,7 +30,6 @@ if(!donner.utilisateurs[donner.profilSelect].badges.boutonSecrt){
 const documentBadgeTexte100JeuxWilders = document.querySelector("#badgeText100JeuxWilders");
 const documentBadgeImg100JeuxWilders = document.querySelector("#badgeImg100JeuxWilders");
 if(!donner.utilisateurs[donner.profilSelect].badges.jeux){
-<<<<<<< HEAD
     documentBadgeTexte100JeuxWilders.classList.add('invisible');
     documentBadgeImg100JeuxWilders.src = "./public/point interrogation.png";
 }
@@ -54,9 +44,3 @@ documentBoutonSecret.addEventListener('click', function(event) {
     documentBadgeTexteBoutonSecret.classList.remove('invisible');
     documentBadgeImgBoutonSecret.src = "./public/bouton secret.png";
 });
-=======
-    console.log("ok");
-    documentBadgeTexte100JeuxWilders.classList.add('invisible');
-    documentBadgeImg100JeuxWilders.src = "./public/point interrogation.png";
-}
->>>>>>> 642b9d4b9b090534ba49d81d3ddc758abbccb3c3

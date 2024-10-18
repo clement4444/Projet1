@@ -8,6 +8,7 @@ export function setEcoute(id, documentListProfil, donner){
     
     //gestion clik div
     documentDiv.addEventListener('click', function() {
+        donner = data.copy();
         //met a jour le profil selec dans la base de donner
         donner.profilSelect = id;
         data.push(donner);
@@ -17,6 +18,7 @@ export function setEcoute(id, documentListProfil, donner){
 
     //gestion clik crayon
     documentCrayon.addEventListener('click', function(event) {
+      donner = data.copy();
       //empeche le clik de la div en meme temps
       event.stopPropagation();
       //met a jour le profil selec dans la base de donner
