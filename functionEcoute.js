@@ -1,12 +1,13 @@
 import { data } from "./commun/js/data.js";
 
+//set ecoute profil et crayon
 export function setEcoute(id, documentListProfil, donner){
     //récuper la div et le crayon
     let documentDiv = documentListProfil[id]
     let documentCrayon = documentListProfil[id].querySelector(".crayon");
 
     
-    //gestion clik div
+    //gestion clik div profil
     documentDiv.addEventListener('click', function() {
         donner = data.copy();
         //met a jour le profil selec dans la base de donner

@@ -1,4 +1,4 @@
-import { data } from "../../commun/js/data.js";
+import { data } from "./commun/js/data.js";
 import { setEcouteBoutonAjouter } from "./functionEcoute.js";
 import { setEcouteJeuxCrew } from "./functionEcoute.js";
 import { setEcouteBoutonProfilAleatoir } from "./functionEcoute.js";
