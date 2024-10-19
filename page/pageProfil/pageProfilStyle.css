@@ -297,3 +297,14 @@ main > button:hover{
 .invisible{
     display: none;
 }
+
+#boutonSecret{
+    background-color: var(--couleur_section);
+    padding: 2vw;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+}
+#boutonSecret:hover{
+    cursor:copy;
+}

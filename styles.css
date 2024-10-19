@@ -119,8 +119,10 @@ main .crew .titreCrew h2{
 
 main .crew .filtre{
     display: flex;
+    flex-wrap: wrap;
     margin: 0 5vw 4vw 5vw;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 4vw;
 }
 
 main .crew .filtre select{
@@ -128,7 +130,7 @@ main .crew .filtre select{
     padding: 0.3vw 0.5vw;
     border-radius: 50px;
     border: 3px black solid;
-    font-size: 2vw;
+    font-size: 4vw;
 }
 
 main .crew .filtre label{
@@ -142,7 +144,7 @@ main .crew .filtre label{
 main .crew .filtre p{
     display: inline;
     background-color: var(--couleur_foncer);
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
@@ -150,7 +152,7 @@ main .crew .filtre p{
 
 main .crew .filtre button{
     background-color: var(--couleur_foncer);
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
@@ -163,7 +165,7 @@ main .crew .filtre button:hover{
 
 #recherche{
     background-color: var(--couleur_foncer);
-    font-size: 2vw;
+    font-size: 4vw;
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
@@ -183,6 +185,7 @@ main .crew .profil{
     align-items:flex-start;
     @media screen and (max-width: 1024px){
         margin-top: 1.5em;
+        justify-content:space-around;
     }
 }
 
