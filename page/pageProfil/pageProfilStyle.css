@@ -299,7 +299,7 @@ main > button:hover{
 }
 
 #boutonSecret{
-    background-color: var(--couleur_section);
+    opacity: 0;
     padding: 2vw;
     position: absolute;
     top: 50%;
