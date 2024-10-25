@@ -1,8 +1,8 @@
-import { photoDefaut, photoPhilippe, photoFabien, photoClement} from "./phauto.js";
+import { photoDefaut, photoPhilippe, photoFabien, photoClement } from "./phauto.js";
 //V3
 export const data = {
-    copy :function(){
-        if (varifierdataSet()){
+    copy: function () {
+        if (varifierdataSet()) {
             //récuper les donner
             const donner = localStorage.getItem('datadonner');
             console.log("bien copier");
@@ -10,114 +10,116 @@ export const data = {
             return JSON.parse(donner);
         }
     },
-    push : function(donner, win=false){
-        if (varifierdataSet()){
+    push: function (donner, win = false) {
+        if (varifierdataSet()) {
             //verifier que c'est un objet
-            if (typeof donner === "object" && !Array.isArray(donner)){
+            if (typeof donner === "object" && !Array.isArray(donner)) {
                 //chager les donner actuel
                 let donnerActuel = localStorage.getItem('datadonner');
                 //caste pour avoir un dico
                 donnerActuel = JSON.parse(donnerActuel);
-                
-                try{
+
+                try {
                     //verifie que le tableux est le meme
-                    if (donnerActuel.utilisateurs.length+1 >= donner.utilisateurs.length && donnerActuel.utilisateurs.length-1 <= donner.utilisateurs.length){
+                    if (donnerActuel.utilisateurs.length + 1 >= donner.utilisateurs.length && donnerActuel.utilisateurs.length - 1 <= donner.utilisateurs.length) {
                         //met dans le bon odre les profil
                         donner = trierIdUtilisateur(donner);
                         //envoie les donner dans la base de donner
                         localStorage.setItem('datadonner', JSON.stringify(donner));
                         console.log("bien envoyer");
-                        if (win){
+                        if (win) {
                             return true;
-                        }else{
+                        } else {
                             return donner;
                         }
-                    }else{
+                    } else {
                         console.log("eurreur push 01 : la base de donner que tu a envoyer est incomplette il a + de une différence avec la base de donner actuel");
                         throw new Error("push 01");
                     }
-                }catch{
+                } catch {
                     console.log("eurreur push 02 : tu a envoyer un element qui était pas le meme tableux le programe a crash car il a pas troiver la clé utilisateur");
                     throw new Error("push 02");
                 }
-            }else{
+            } else {
                 console.log("eurreur push 03 : tu esseye d'envoyer autre chose que la base de donner");
                 throw new Error("push 03");
             }
         }
     },
-    set : function(forcer=false){
+    set: function (forcer = false) {
         //chager les donner actuel
         let donnerActuel = localStorage.getItem('datadonner');
         //caste pour avoir un dico
         donnerActuel = JSON.parse(donnerActuel);
         //verifier que les donner sont pas nul et pas forcer détre set
-        if (donnerActuel == null || forcer){
-            const donnerUtilisateur = { utilisateurs : [{nom : "van der eecken", prenom : "philippe", age : 59, statut : "éleve", mail : "", desciption : "un des 4 fondateur du site", objectifPersonel : "", photo:photoPhilippe, couleur:"vert", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:true, compte10:true, jeux:true, boutonSecrt:true}, id : 0},
-                {nom : "fiquet", prenom : "clément", age : 17, statut : "éleve", mail : "", desciption : "un des 4 fondateur du site", objectifPersonel : "", photo:photoClement, couleur:"rose", resaux : {instagrame : "emmanuelmacron", in : "emmanuelmacron", facebookin : "EmmanuelMacron", twitter : "elonmusk"}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 1},
-                {nom : "", prenom : "fabien", age : 19, statut : "éleve", mail : "", desciption : "un des 4 fondateur du site", objectifPersonel : "", photo:photoFabien, couleur:"vert", resaux : {instagrame : "spacex", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 2},
-                {nom : "", prenom : "", age : null, statut : "none", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"jaunne", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : 3}
-            ], profilSelect :0, darkMod : false, bakUp : "-1"}
-            
+        if (donnerActuel == null || forcer) {
+            const donnerUtilisateur = {
+                utilisateurs: [{ nom: "nom", prenom: "prenom", age: 33, statut: "éleve", mail: "", desciption: "un des 4 fondateur du site", objectifPersonel: "", photo: photoPhilippe, couleur: "vert", resaux: { instagrame: "", in: "", facebookin: "", twitter: "" }, badges: { profil100: true, compte10: true, jeux: true, boutonSecrt: true }, id: 0 },
+                { nom: "bob", prenom: "michel", age: 17, statut: "éleve", mail: "", desciption: "un des 4 fondateur du site", objectifPersonel: "", photo: photoClement, couleur: "rose", resaux: { instagrame: "emmanuelmacron", in: "emmanuelmacron", facebookin: "EmmanuelMacron", twitter: "elonmusk" }, badges: { profil100: false, compte10: false, jeux: false, boutonSecrt: false }, id: 1 },
+                { nom: "", prenom: "jean", age: 19, statut: "éleve", mail: "", desciption: "un des 4 fondateur du site", objectifPersonel: "", photo: photoFabien, couleur: "vert", resaux: { instagrame: "spacex", in: "", facebookin: "", twitter: "" }, badges: { profil100: false, compte10: false, jeux: false, boutonSecrt: false }, id: 2 },
+                { nom: "", prenom: "", age: null, statut: "none", mail: "", desciption: "", objectifPersonel: "", photo: photoDefaut, couleur: "jaunne", resaux: { instagrame: "", in: "", facebookin: "", twitter: "" }, badges: { profil100: false, compte10: false, jeux: false, boutonSecrt: false }, id: 3 }
+                ], profilSelect: 0, darkMod: false, bakUp: "-1"
+            }
+
             //set les donner
             localStorage.setItem('datadonner', JSON.stringify(donnerUtilisateur));
             console.log("la base a été set");
             return donnerUtilisateur;
-        }else{
+        } else {
             console.log("donner exiente garder");
             return donnerActuel
         }
     },
-    add : function(donner=false){
-        if (varifierdataSet()){
+    add: function (donner = false) {
+        if (varifierdataSet()) {
             let addPossible = true;
             //verifier que les donner on pas éte envoyer
-            if (!donner){
+            if (!donner) {
                 //si les donner son pas envoyer on prend la base de donner exitant
                 donner = localStorage.getItem('datadonner');
                 //caste pour que ce soit un objet
                 donner = JSON.parse(donner);
-            }else{
+            } else {
                 //verifi que le dico est bon pour la suite
                 addPossible = data.push(donner, true);
             }
-            if (addPossible){
+            if (addPossible) {
                 //ajoute une ligne utilisateur
                 let idAdd = donner.utilisateurs.length;
-                donner["utilisateurs"].push({nom : "", prenom : "", age : null, statut : "none", mail : "", desciption : "", objectifPersonel : "", photo:photoDefaut, couleur:"vert", resaux : {instagrame : "", in : "", facebookin : "", twitter : ""}, badges : {profil100:false, compte10:false, jeux:false, boutonSecrt:false}, id : idAdd});
+                donner["utilisateurs"].push({ nom: "", prenom: "", age: null, statut: "none", mail: "", desciption: "", objectifPersonel: "", photo: photoDefaut, couleur: "vert", resaux: { instagrame: "", in: "", facebookin: "", twitter: "" }, badges: { profil100: false, compte10: false, jeux: false, boutonSecrt: false }, id: idAdd });
                 //met dans le bonne orde les profile
                 donner = trierIdUtilisateur(donner);
                 //met a jour la base de donner
                 localStorage.setItem('datadonner', JSON.stringify(donner));
                 //confirmation d'envoie
-                console.log(`profile crée en indice ${(donner.utilisateurs.length)-1}`);
+                console.log(`profile crée en indice ${(donner.utilisateurs.length) - 1}`);
                 return donner;
             }
             console.log("eurreur add 01 : le profile na pas été ajoute les donner fournie ne sont pas bonne");
             throw new Error("add 01");
         }
     },
-    delProfil : function(id=false, donner=false){
-        if (varifierdataSet()){
+    delProfil: function (id = false, donner = false) {
+        if (varifierdataSet()) {
             let delPossible = true;
-            if (!donner){
+            if (!donner) {
                 //si les donner son pas envoyer on prend la base de donner exitant
                 donner = localStorage.getItem('datadonner');
                 //caste pour que ce soit un objet
                 donner = JSON.parse(donner);
-            }else{
+            } else {
                 //verifie que les donner envoyer soit bonne
                 delPossible = data.push(donner, true);
             }
-            if (delPossible){
-                if (id === "end"){
+            if (delPossible) {
+                if (id === "end") {
                     //set le dernier id de la liste
-                    id = donner.utilisateurs.length-1;
+                    id = donner.utilisateurs.length - 1;
                 }
-                if (typeof id === 'number' && !isNaN(id)){
-                    if (donner.utilisateurs.length > 0){
-                        if (id <= donner.utilisateurs.length-1 && id > -1){
-                            if (donner.utilisateurs.length > 0){
+                if (typeof id === 'number' && !isNaN(id)) {
+                    if (donner.utilisateurs.length > 0) {
+                        if (id <= donner.utilisateurs.length - 1 && id > -1) {
+                            if (donner.utilisateurs.length > 0) {
                                 //sup le profil
                                 donner.utilisateurs.splice(id, 1);
                                 //sauvgarder les donner
@@ -125,34 +127,34 @@ export const data = {
                                 localStorage.setItem('datadonner', JSON.stringify(donner));
                                 console.log(`le profil d'indice ${id} a bien été sup`);
                                 return donner;
-                            }else{
+                            } else {
                                 console.log("immpossible de suprimer le profile car il a plus de profil");
                             }
 
-                        } else{
+                        } else {
                             console.log("eurreur delProfile 01 : id choisi est superieur a la taille de la liste ou infèrieur a 0");
                             throw new Error("delProfile 01");
                         }
-                    }else{
+                    } else {
                         console.log("il a pas de profile a suprimer :)");
                     }
-                }else{
+                } else {
                     console.log("eurreur delProfile 02 : vous n'avez pas rensénier de nombre correct de type nombre");
                     throw new Error("delProfile02");
                 }
-            }else{
+            } else {
                 console.log("eurreur delProfile 03 : les donner envoyer son pas la bonne base de donner");
                 throw new Error("delProfile 03");
             }
         }
 
     },
-    boom:function(action="all"){
+    boom: function (action = "all") {
         // set profil all
-        if (action==="all"){
+        if (action === "all") {
             localStorage.clear();
             console.log("base de donner sup")
-        }else if (action==="profil"){
+        } else if (action === "profil") {
             let donner = localStorage.getItem('datadonner');
             //caste pour que ce soit un objet
             donner = JSON.parse(donner);
@@ -164,18 +166,18 @@ export const data = {
             console.log("tout les profile on été sup");
             return donner;
 
-        }else if (action === "set"){
+        } else if (action === "set") {
             localStorage.clear();
             //set la base de donner apreès l'avoir clear
             let donner = data.set(true);
             console.log("la base de donner a été sup puis re crée a neuf");
             return donner;
-        }else{
+        } else {
             console.log("eurreur boom 01 : l'argument rentrer n'est pas valide voici les argumenet valide -> '', 'all','set', 'ptofil'");
             throw new Error("boom 01");
         }
     },
-    help:function(){
+    help: function () {
         console.log(`Documentation du module data :
 
     data.set() : crée la base de donner sauf si elle exite déja ca garde les donnée existance
@@ -219,7 +221,7 @@ si il a un crash du ficher data et que c'est pas un crash volontaire du style eu
             
 `);
     },
-    helpBaseDonner:function(){
+    helpBaseDonner: function () {
         console.log(`Documentation de la base de donner :
     la base de donner est un objet qui est renvoyer par a peut pré toute les méthode. cette objet a 3 élement :
         utilisateurs : qui contient la liste des profil enregister sur le site (ou crée par defaut)
@@ -266,22 +268,22 @@ si il a un crash du ficher data et que c'est pas un crash volontaire du style eu
 
             `);
     },
-    image:{
-        format64: function(image, callback){
+    image: {
+        format64: function (image, callback) {
             if (!image) {
                 console.log("eurreur image.format64 01 : image non fournie");
                 throw new Error("image.format64 01");
                 return;
             }
-        
+
             let lecteur = new FileReader();
-        
+
             // Quand la lecture du fichier est terminée avec succès
-            lecteur.onloadend = function(e) {
+            lecteur.onloadend = function (e) {
                 let imageBase64 = e.target.result;  // Image convertie en Base64
                 callback(imageBase64);
             };
-        
+
             // Lire le fichier comme Base64
             lecteur.readAsDataURL(image);
         },
@@ -289,32 +291,32 @@ si il a un crash du ficher data et que c'est pas un crash volontaire du style eu
 };
 
 
-function varifierdataSet(){
+function varifierdataSet() {
     //si les donner son pas envoyer on prend la base de donner exitant
     let donnerActuel = localStorage.getItem('datadonner');
     //caste pour que ce soit un objet
     donnerActuel = JSON.parse(donnerActuel);
     //verifier que c'est un dico
-    if (donnerActuel !== null && donnerActuel !== undefined && typeof donnerActuel === "object" && !Array.isArray(donnerActuel)){
-        if (donnerActuel.utilisateurs){
+    if (donnerActuel !== null && donnerActuel !== undefined && typeof donnerActuel === "object" && !Array.isArray(donnerActuel)) {
+        if (donnerActuel.utilisateurs) {
             return true
-        }else{
+        } else {
             console.log("eurreur set 01 : la base de donner na pas été set");
             throw new Error("set 01");
             return false
         }
-    }else{
+    } else {
         console.log("eurreur set 01 : la base de donner na pas été set");
         throw new Error("set 01");
         return false
     }
 }
 
-function trierIdUtilisateur(donner){
+function trierIdUtilisateur(donner) {
     //trie les id du plus petite au plus grand
     donner.utilisateurs = donner.utilisateurs.sort((a, b) => a.id - b.id);
     //remet tout les id port rapport a leur place dans la liste (si il en a de sup)
-    for (let i=1;i<donner.utilisateurs.length; i++){
+    for (let i = 1; i < donner.utilisateurs.length; i++) {
         donner.utilisateurs[i].id = i;
     }
     return donner
