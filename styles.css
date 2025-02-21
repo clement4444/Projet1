@@ -119,8 +119,12 @@ main .crew .titreCrew h2{
 
 main .crew .filtre{
     display: flex;
+    flex-wrap: wrap;
     margin: 0 5vw 4vw 5vw;
-    justify-content: space-between;
+    justify-content: space-around;
+    @media screen and (max-width: 1024px){
+        gap: 3.4vw;
+    }
 }
 
 main .crew .filtre select{
@@ -129,6 +133,9 @@ main .crew .filtre select{
     border-radius: 50px;
     border: 3px black solid;
     font-size: 2vw;
+    @media screen and (max-width: 1024px){
+        font-size: 4vw;
+    }
 }
 
 main .crew .filtre label{
@@ -146,6 +153,9 @@ main .crew .filtre p{
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
+    @media screen and (max-width: 1024px){
+        font-size: 4vw;
+    }
 }
 
 main .crew .filtre button{
@@ -154,11 +164,13 @@ main .crew .filtre button{
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
+    @media screen and (max-width: 1024px){
+        font-size: 4vw;
+    }
 }
 main .crew .filtre button:hover{
     cursor: pointer;
     background-color: rgb(13, 144, 164);
-
 }
 
 #recherche{
@@ -167,6 +179,9 @@ main .crew .filtre button:hover{
     padding: 0.3vw 1vw;
     border: 3px black solid;
     border-radius: 50px;
+    @media screen and (max-width: 1024px){
+        font-size: 4vw;
+    }
 }
 
 /* les profile */
@@ -183,6 +198,7 @@ main .crew .profil{
     align-items:flex-start;
     @media screen and (max-width: 1024px){
         margin-top: 1.5em;
+        justify-content:space-around;
     }
 }
 

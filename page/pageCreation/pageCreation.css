@@ -180,11 +180,7 @@ body form .formLabel{
 
 .boutonSave{
     background-color: rgb(132, 200, 31);
-    left: 20vw;
-    /* z-index: 1; */
-    @media screen and (max-width: 1024px){
-        left: 15vw;
-    }
+    left: calc((50% - 7em)/1.3);
 }
 .boutonSave:hover{
     background-color: greenyellow;
@@ -193,11 +189,7 @@ body form .formLabel{
 
 .boutonAnnuler{
     background-color: rgb(212, 17, 17);
-    right: 20vw;
-    /* z-index: 1; */
-    @media screen and (max-width: 1024px){
-        right: 15vw;
-    }
+    right: calc((50% - 7em)/1.3);
 }
 .boutonAnnuler:hover{
     background-color: rgb(255, 0, 0);

@@ -15,7 +15,7 @@ setEcoutBoutonExit(documentBoutonExit);
 let counter = 0;
 let firstSelection = "";
 let secondSelection = "";
-let lives = 6;
+let lives = 10;
 
 const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {
